@@ -17,7 +17,7 @@ class App {
 
         
         //Xử lý Action
-        if (isset($arr[1])) { 
+        if (isset($arr[1])) {
             if (method_exists($this->controller,$arr[1])) { 
                 $this->action = $arr[1]; 
             }
@@ -30,7 +30,7 @@ class App {
 
     }
 
-    function UrlProcess() { 
+    function UrlProcess() {
         if (isset($_GET["url"])) { 
             return explode("/", filter_var(trim($_GET["url"], "/"))); 
         }
