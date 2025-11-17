@@ -1,24 +1,45 @@
 /* Tổng thể */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+}
+
 .contain {
   display: flex;
   width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
 }
 
 /* Sidebar */
 #nav-bar {
-  width: 40%;
+  width: 280px;
+  min-width: 280px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, width 0.3s ease;
+  background: linear-gradient(180deg, #1d2d5e 0%, #2a3f6f 100%);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
 .page-content {
-  height: 87vh;
-  overflow: scroll;
+  min-height: calc(100vh - 90px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  margin-top: 90px;
+  background-color: #f5f7fa;
 }
 
 .nav-logo {
@@ -26,77 +47,143 @@
   justify-content: center;
   align-items: center;
   height: 90px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px;
 }
 
 .nav-logo img {
-  width: 150px;
-  height: 60px;
+  width: 180px;
+  height: auto;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .nav-menu {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   padding: 20px 0;
+  flex: 1;
 }
 
 .nav-item {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
+  padding: 15px 25px;
+  margin: 0 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.nav-item a, .nav-item .icon-sidebar {
-  font-size: 18px;
-  color: #1d2d5e;
+.nav-item a {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
+  font-weight: 500;
+  flex: 1;
 }
 
 .nav-item:hover {
-  background-color: #e3e3ff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 4px solid #0cb8b6;
 }
 
 .icon-sidebar {
   font-size: 20px;
-  color: #6c757d;
+  color: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 30px;
 }
 
-
 /* Nội dung */
 .content {
   width: 100%;
+  /* margin-left: 280px; */
 }
 
 .header-admin {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 90px;
-  padding: 0 20px;
+  padding: 0 30px;
   background-color: #fff;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 280px;
+  z-index: 999;
+}
+
+.header-admin .header-left {
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-.header-admin button{
-  background-color: #1d2d5e;
+.header-admin .header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-admin button {
+  background: linear-gradient(135deg, #1d2d5e 0%, #2a3f6f 100%);
   color: white;
   border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-admin button:hover {
+  background: linear-gradient(135deg, #2a3f6f 0%, #1d2d5e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(29, 45, 94, 0.3);
+}
+
+.avatar-admin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .avatar-admin img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
+  border: 2px solid #0cb8b6;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #nav-bar {
+    transform: translateX(-100%);
+  }
+  
+  .content,
+  .page-content,
+  .header-admin {
+    margin-left: 0;
+    left: 0;
+  }
 }
 

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<base href="/Clinic-Booking/">
+    <base href="/PHP_CLINIC/Clinic-Booking/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/Admin.css">
@@ -19,6 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="contain">
         <!-- Sidebar -->
@@ -29,9 +31,15 @@
             <div class="nav-menu">
                 <div class="nav-item">
                     <div class="icon-sidebar">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <a href="./Admin/show">Dashboard</a>
+                </div>
+                <div class="nav-item">
+                    <div class="icon-sidebar">
                         <i class="fa-solid fa-calendar-plus"></i>
                     </div>
-                    <a href="./Admin/show">Appointment Schedule</a>
+                    <a href="./Admin/appointmentSchedule">Appointment Schedule</a>
                 </div>
                 <div class="nav-item">
                     <div class="icon-sidebar">
@@ -51,12 +59,17 @@
         <!-- Nội dung chính -->
         <div class="content">
             <div class="header-admin">
-                <div class="avatar-admin">
-                    <img src="public/images/uploads/defaultAvatar.jpg" alt="Avatar Admin">
+                <div class="header-left">
+                    <h3 style="color: #1d2d5e; font-weight: 600; margin: 0;">Admin Dashboard</h3>
                 </div>
-                <form action="./Admin/logOutAdmin" method="POST">
-                    <button type="submit"> <i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</button>
-                </form>
+                <div class="header-right">
+                    <div class="avatar-admin">
+                        <img src="public/images/uploads/defaultAvatar.jpg" alt="Avatar Admin">
+                    </div>
+                    <form action="./Admin/logOutAdmin" method="POST" style="margin: 0;">
+                        <button type="submit"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+                    </form>
+                </div>
             </div>
             <div class="page-content">
                 <?php 
@@ -66,4 +79,5 @@
         </div>
     </div>
 </body>
+
 </html>

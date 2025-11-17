@@ -300,5 +300,86 @@ use Stripe\Billing\Alert;
             $stmtInsert->execute();
             $stmtInsert->close();
         }
+
+        // Admin methods
+        public function getDoctorInforforAdmin() {
+            $sql = "SELECT u.*, d.DoctorID, d.DoctorFees, d.SPID, s.SPName as Specialty,
+                    COALESCE(u.Status, 0) as AccountStatus
+                    FROM User u
+                    INNER JOIN Doctor d ON d.UserID = u.UserID
+                    INNER JOIN Specilist s ON s.SPID = d.SPID
+                    WHERE u.RoleID = '2'
+                    ORDER BY d.DoctorID";
+            return mysqli_query($this->con, $sql);
+        }
+
+        public function getAllSpecialtiesAdmin() {
+            $sql = "SELECT * FROM specilist ORDER BY SPName";
+            return mysqli_query($this->con, $sql);
+        }
+
+        public function insertDoctor($specialtyID, $fees, $userID) {
+            $sql = "INSERT INTO doctor (SPID, DoctorFees, UserID) VALUES ('$specialtyID', '$fees', '$userID')";
+            return mysqli_query($this->con, $sql);
+        }
+
+        public function getTotalDoctorsCount() {
+            $sql = "SELECT COUNT(*) as total FROM doctor";
+            $result = mysqli_query($this->con, $sql);
+            if ($row = mysqli_fetch_assoc($result)) {
+                return (int)$row['total'];
+            }
+            return 0;
+        }
+
+        // Lock/Unlock doctor account
+        public function toggleDoctorLockStatus($userID, $status) {
+            $sql = "UPDATE user SET Status = '$status' WHERE UserID = '$userID'";
+            return mysqli_query($this->con, $sql);
+        }
+
+        // Update doctor specialty
+        public function updateDoctorSpecialty($doctorID, $specialtyID) {
+            $sql = "UPDATE doctor SET SPID = '$specialtyID' WHERE DoctorID = '$doctorID'";
+            return mysqli_query($this->con, $sql);
+        }
+
+        // Update doctor fees
+        public function updateDoctorFees($doctorID, $fees) {
+            $sql = "UPDATE doctor SET DoctorFees = '$fees' WHERE DoctorID = '$doctorID'";
+            return mysqli_query($this->con, $sql);
+        }
+
+        // Update doctor profile (user info)
+        public function updateDoctorProfile($userID, $fullName, $gender, $birth, $phoneNumber, $address) {
+            $sql = "UPDATE user 
+                    SET FullName = '$fullName', Gender = '$gender', DOB = '$birth', 
+                        PhoneNumber = '$phoneNumber', Address = '$address'
+                    WHERE UserID = '$userID'";
+            return mysqli_query($this->con, $sql);
+        }
+
+        // Get doctor status
+        public function getDoctorStatus($userID) {
+            $sql = "SELECT Status FROM user WHERE UserID = '$userID'";
+            $result = mysqli_query($this->con, $sql);
+            if ($row = mysqli_fetch_assoc($result)) {
+                return isset($row['Status']) ? (int)$row['Status'] : 0;
+            }
+            return 0;
+        }
+        public function updateDoctor($id, $name, $email, $phone, $specialty, $fees)
+        {
+            $sql = "UPDATE doctors 
+                    SET FullName = ?, Email = ?, PhoneNumber = ?, Specialty = ?, DoctorFees = ?
+                    WHERE DoctorID = ?";
+        
+            $stmt = $this->con->prepare($sql);
+            $stmt->bind_param("ssssdi", $name, $email, $phone, $specialty, $fees, $id);
+        
+            return $stmt->execute();
+        }
+        
+
     }
 ?>

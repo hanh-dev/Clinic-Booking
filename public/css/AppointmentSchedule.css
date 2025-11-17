@@ -69,10 +69,27 @@
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.badge-info {
-    background-color: #17a2b8;
+.badge-warning {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.badge-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.badge-secondary {
+    background-color: #6c757d;
     color: white;
 }
 
@@ -122,65 +139,4 @@
     background: #f8f9fa;
     border-color: #1d2d5e;
 }
-
-/* Action Buttons */
-.action-buttons {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.btn-action {
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-
-.btn-lock {
-    background-color: #dc3545;
-    color: white;
-}
-
-.btn-lock:hover {
-    background-color: #c82333;
-    transform: translateY(-2px);
-}
-
-.btn-unlock {
-    background-color: #28a745;
-    color: white;
-}
-
-.btn-unlock:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-}
-
-.btn-reset {
-    background-color: #ffc107;
-    color: #000;
-}
-
-.btn-reset:hover {
-    background-color: #e0a800;
-    transform: translateY(-2px);
-}
-
-.badge-success {
-    background-color: #28a745;
-    color: white;
-}
-
-.badge-danger {
-    background-color: #dc3545;
-    color: white;
-}
-
 

@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form method="POST" action="Login/authenticate">
+    <form method="POST" action="Login/  ">
         <input type="text" name="email" required placeholder="Email">
         <input type="text" name="password" required placeholder="Password">
         <button type="submit">Đăng Nhập</button>

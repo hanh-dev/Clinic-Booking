@@ -7,8 +7,12 @@
     <title>Home</title>
     <base href="/PHP_CLINIC/Clinic-Booking/">
     <link rel="stylesheet" href="public/css/Home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" id="google-font-quicksand-css" href="https://fonts.googleapis.com/css?family=Quicksand%3A300%2C400%2C700&amp;ver=6.7.1&amp;display=swap" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" id="google-font-quicksand-css"
+        href="https://fonts.googleapis.com/css?family=Quicksand%3A300%2C400%2C700&amp;ver=6.7.1&amp;display=swap"
+        media="all">
 </head>
 
 <body>
@@ -60,7 +64,8 @@
                         </h2>
                     </div>
                     <div class="description">
-                        <p>Please fill out the form below and we will set an appointment time for you, or you can just call our HQ and set your time by a call.</p>
+                        <p>Please fill out the form below and we will set an appointment time for you, or you can just
+                            call our HQ and set your time by a call.</p>
                     </div>
                     <img src="public/images/icon/icon_banner_2.png" alt="">
                 </div>
@@ -74,7 +79,8 @@
         <div class="container">
             <div class="hero-banner-3">
                 <div class="banner-3-left">
-                    <img loading="lazy" decoding="async" width="590" height="616" src="public/images/Banner_3.jpg" alt="banner-">
+                    <img loading="lazy" decoding="async" width="590" height="616" src="public/images/Banner_3.jpg"
+                        alt="banner-">
                 </div>
                 <div class="banner-3-right">
                     <div class="img-title">
@@ -90,22 +96,26 @@
                     </div>
                     <div class="desciribe-physical">
                         <div class="icon-content">
-                            <div class="icon"><img class="icon-physical" decoding="async" width="25" height="30" src="public/images/icon/birthday_control.png" alt=""></div>
+                            <div class="icon"><img class="icon-physical" decoding="async" width="25" height="30"
+                                    src="public/images/icon/birthday_control.png" alt=""></div>
                             <p>Birth Control</p>
                         </div>
                         <div class="icon-content">
-                            <div class="icon"> <img class="icon-physical" decoding="async" width="31" height="31" src="public/images/icon/cough.png" alt=""></div>
+                            <div class="icon"> <img class="icon-physical" decoding="async" width="31" height="31"
+                                    src="public/images/icon/cough.png" alt=""></div>
                             <p>Cold, Cough and Flu
                             <p>
                         </div>
                     </div>
                     <div class="desciribe-physical">
                         <div class="icon-content">
-                            <div class="icon"><img class="icon-physical" decoding="async" width="30" height="30" src="public/images/icon/primary_care.png" alt=""></div>
+                            <div class="icon"><img class="icon-physical" decoding="async" width="30" height="30"
+                                    src="public/images/icon/primary_care.png" alt=""></div>
                             <p>Primary Care</p>
                         </div>
                         <div class="icon-content">
-                            <div class="icon"> <img class="icon-physical" decoding="async" width="27" height="29" src="public/images/icon/blood.png" alt=""></div>
+                            <div class="icon"> <img class="icon-physical" decoding="async" width="27" height="29"
+                                    src="public/images/icon/blood.png" alt=""></div>
                             <p>High Blood Pressure
                             <p>
                         </div>
@@ -128,7 +138,8 @@
             <div class="hero-banner-4">
                 <div class="banner-4-left">
                     <div class="doctor">
-                        <img class="banner-doctor" loading="lazy" decoding="async" src="public/images/doctors/Andy.jpg" alt="Doctor Andy">
+                        <img class="banner-doctor" loading="lazy" decoding="async" src="public/images/doctors/Andy.jpg"
+                            alt="Doctor Andy">
                         <div class="info-doctor">
                             <div class="name">Andy McDonough</div>
                             <div class="special">Cancer Patient</div>
@@ -139,7 +150,9 @@
                         <h3>An <span>excellent</span> way to get started</h3>
                     </div>
                     <div class="description">
-                        <p>Please fill out the form below and we will set an appointment time for you, or you can just call our HQ and set your We just had a dream, A vision, All we had to do was to tell them our idea and that was our part.</p>
+                        <p>Please fill out the form below and we will set an appointment time for you, or you can just
+                            call our HQ and set your We just had a dream, A vision, All we had to do was to tell them
+                            our idea and that was our part.</p>
                     </div>
                     <div class="icon-star">
                         <i class="fas fa-star" style="color: #0cb8b6;"></i>
@@ -181,7 +194,8 @@
                                     <img src="public/images/icon/register.png" alt="">
                                 </div>
                                 <h3>Online Registration</h3>
-                                <p> Our wait times are short, and you can save even more time by registering for your visit online.</p>
+                                <p> Our wait times are short, and you can save even more time by registering for your
+                                    visit online.</p>
                             </div>
                         </div>
                         <div class="reason-extra-clicnic">
@@ -197,7 +211,8 @@
                                     <img src="public/images/icon/extend.png" alt="">
                                 </div>
                                 <h3>Extended Hours</h3>
-                                <p> We’re open mornings, evenings, and weekends so that you can see a provider when you need one.</p>
+                                <p> We’re open mornings, evenings, and weekends so that you can see a provider when you
+                                    need one.</p>
                             </div>
                         </div>
                     </div>
@@ -220,7 +235,8 @@
                     <h2>Meet our awesome <span> Experts</span></h2>
                 </div>
                 <div class="description">
-                    <p>Our ability to deliver outstanding results for our clients <br> starts with our team of experts.</p>
+                    <p>Our ability to deliver outstanding results for our clients <br> starts with our team of experts.
+                    </p>
                 </div>
             </div>
             <div class="cards-doctors">
@@ -266,7 +282,8 @@
                         </div>
 
                         <div class="description">
-                            <p>If insurance is not an option, your initial visit would be $90 USD, if pay cash A variety of payment plans are accepted.</p>
+                            <p>If insurance is not an option, your initial visit would be $90 USD, if pay cash A variety
+                                of payment plans are accepted.</p>
                         </div>
                         <div class="redirector">
                             <p>No Insurance?</p>
